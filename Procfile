@@ -1,1 +1,1 @@
-worker: python fhghgh.py
+worker: python file.py
