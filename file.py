@@ -10,12 +10,12 @@ vaks = ('Токарь-универсал', 'Токарь', 'Оператор н�
 a = ''
 
 for i in range(0, len(vaks)):
-    a = a + vaks[i] + '\n' + 'з/п:' + '\n'
+    a = a + vaks[i] + '\n' + 'з/п: от 70000р.' + '\n'
 
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(msg: types.Message):
-    await msg.answer(f'Я бот компании "Region78". {msg.from_user.first_name}')
+    await msg.answer(f'Я бот компании "Region78". Введите эти команды, чтобы узнать больше: Аутстаффинг, Аутсорсинг, Вакансии,Цены за услуги.')
 
 
 @dp.message_handler(content_types=['text'])
