@@ -15,7 +15,7 @@ for i in range(0, len(vaks)):
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(msg: types.Message):
-    await msg.answer(f'Я бот компании "Region78". Введите эти команды, чтобы узнать больше: Аутстаффинг, Аутсорсинг, Вакансии,Цены за услуги.')
+    await msg.answer(f'Я бот компании "Region78". Мы работаем как и для людей, так и для компаний. Введите эти команды, чтобы узнать больше: Аутстаффинг, Аутсорсинг, Вакансии,Цены за услуги.')
 
 
 @dp.message_handler(content_types=['text'])
@@ -32,7 +32,7 @@ async def get_text_messages(msg: types.Message):
                                'деловом обиходе аутсорсинг – привлечение организацией сторонних компаний для выполнения каких-либо '
                                'функций.')
     if msg.text == 'Цены за услуги':
-        await bot.send_message(msg.from_user.id, 'Привет!')
+        await bot.send_message(msg.from_user.id, 'Для заказчиков стоимость услуг рассчитывается индивидуально. Для соискателей - бесплатно.')
     if msg.text == 'Вакансии':
         await bot.send_message(msg.from_user.id, a)
 
